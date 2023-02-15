@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>David Langarica</title>
+    <!-- Import CSS file-->
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <!-- Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <header>
+        <img src="./yo.png" alt="David" class="profile" />
+        <h1>Hola, soy David Langarica</h1>
+        <p>
+          <strong
+            >David René Langarica Hernández | A01708936 |
+            A01708936@tec.mx
+          </strong>
+        </p>
+        <p>
+          Soy un estudiante de Ingeniería en Tecnologías
+          Computacionales en el Tecnológico de Monterrey.
+        </p>
+      </header>
+      <hr />
+      <section>
+        <table>
+          <thead>
+            <tr>
+              <th>Intereses</th>
+              <th>Proyectos relevantes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <ul>
+                  <li>Front end</li>
+                  <li>Diseño UX</li>
+                  <li>Música electrónica</li>
+                  <li>Películas</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Imify: Clon de Pinterest en React JS</li>
+                  <li>Portafolio personal: Next JS y Three JS</li>
+                  <li>Lefnica: HTML/CSS, JavaScript</li>
+                  <li>LACE: Diseño UX</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="favColor_wrap">
+          <p class="favColor">
+            Mi color favorito es el <span> dorado </span>
+          </p>
+          <form>
+            <div>
+              <label for="color"> Escoge tu color favorito: </label>
+              <input type="color" name="color" />
+            </div>
+            <button type="submit" value="Submit">Registrar</button>
+          </form>
+        </div>
+      </section>
+      <section class="q">
+        <h3>Preguntas Lab 3</h3>
+        <details>
+          <summary>
+            Como ingeniero de software ¿cuál es tu recomendación sobre
+            el uso de !important en un CSS?
+          </summary>
+          <br />
+          Considero su uso debería de ser tremendamente medido y solo
+          utilizarlo en casos de que no exista alguna otra
+          alternativa, después de ver si los problemas se pueden
+          resolver mediante el uso de selectores o de agregar una
+          nueva clase. En mi experiencia, el uso de !important se lo
+          he dado cuando al usar algún widget, gráfico u otros
+          elementos que provienen de un recurso externo tienen un una
+          hoja de estilos predeterminada que no va con el estilo de la
+          página o tiene algún defecto. En ese caso creo que sí es
+          sensato usar !important porque de lo contrario los estilos
+          que queramos aplicar a esos recursos en la hoja de estilos
+          serán sobrescritos cuando se llame al recurso, y tal vez
+          debería de ser el único caso para usarlo.
+        </details>
+        <br />
+        <details>
+          <summary>
+            Si se pone una imagen de fondo en una página HTML, ¿por
+            qué debe escogerse con cuidado?
+          </summary>
+          <br />
+          Desde mi perspectiva existen distintos factores:
+          <ol>
+            <li>
+              Derechos: Tener cuidado que la imagen esté libre de
+              derechos de autor o que tú seas propietario de los
+              derechos (lo mismo con cualquier imagen del sitio).
+            </li>
+            <li>
+              Responsividad: Si la imagen está contenida
+              incorrectamente, entonces puede que no se vea igual en
+              todos los dispositivos y se pierdan partes importantes
+              de la misma.
+            </li>
+            <li>
+              Contraste: Dependiendo de la imagen que se escoja puede
+              que, en algunas secciones, se pierda el contraste entre
+              la misma y el texto, esto para imágenes con muchos
+              colores o detalles.
+            </li>
+            <li>
+              Tamaño: Es posible que la imagen de fondo tenga un
+              tamaño muy grande (y ninguna optimización), por lo que
+              puede afectar el rendimiento de la página (considerando
+              alternativamente que ocupará todo el espacio del sitio).
+            </li>
+          </ol>
+        </details>
+        <br />
+        <details>
+          <summary>
+            Como ingeniero de software, ¿cuál es tu recomendación al
+            elegir las unidades de un propiedad de estilo entre %, px
+            y pt?
+          </summary>
+          <br />
+          Considero que el emplear px o pt no es una buena práctica en
+          cuanto accesibilidad y responsividad. El primero de ellos
+          porque el texto va a variar dependiendo de la resolución de
+          la pantalla, por lo que puede que en pantallas grandes este
+          se vea muy pequeño. Para el caso de pt, este es usado en la
+          impresión, por lo que solo se debería de usar en recursos
+          que posteriormente se van a imprimir (y no en un sitio web).
+          Finalmente creo que % es de las mejores opciones, solo sí el
+          padre también está usando medidas relativas al dispositivo,
+          porque este se ajustará con base en el espacio del padre. No
+          obstante creo que existen mejores opciones como
+          vmax/vmin/rem/em que se ajustan de una mejor manera a la
+          pantalla del dispositivo en uso.
+        </details>
+        <br />
+        <details>
+          <summary>
+            ¿Por qué el uso de una versión minimizada del CSS mejora
+            el rendimiento del sitio?
+          </summary>
+          <br />
+          Cada acción que realicemos en nuestro código impactará en el
+          rendimiento, si agregamos más espacios o comentarios, para
+          nosotros es una buena práctica para la mantenibilidad del
+          código, sin embargo para la computadora son líneas extras
+          que harán que el CSS tarde más tiempo en cargar. Al usar una
+          versión minimizada, estamos adelantando cierto procesos del
+          ciclo de carga de la hoja de estilos.
+        </details>
+      </section>
+      <div class="references">
+        <h3>Referencias</h3>
+        <ul>
+          <li>
+            Guerras, A. (2017, 13 noviembre). Optimización CSS para
+            mejorar el rendimiento de tu web. Aukera.
+            https://aukera.es/blog/optimizacion-css-mejora-el-rendimiento-de-tu-web/
+          </li>
+          <li>
+            M, J. (2022, 30 septiembre). !Important: ¿Qué es y cuándo
+            usarlo? UXDIVI.
+            https://uxdivi.com/blog/important-que-es-y-cuando-usarlo
+          </li>
+        </ul>
+      </div>
+      <footer>
+        <p>
+          Código escrito en CodeSandbox |
+          <a href="https://codesandbox.io/"
+            >https://codesandbox.io/
+          </a>
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>
