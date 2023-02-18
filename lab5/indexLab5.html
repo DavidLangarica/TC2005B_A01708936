@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Lab 5: Bulma | A01708936</title>
+
+    <!-- Import Bulma -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+  </head>
+  <body class="p-6">
+    <header class="hero is-medium is-primary has-text-centered py-6">
+      <h1 class="title is-1 has-text-weight-bold">
+        Hola, soy David Langarica
+      </h1>
+      <div class="card-image has-text-centered">
+        <figure class="image is-128x128 is-inline-block">
+          <img src="./yo.png" alt="David" class="is-rounded" />
+        </figure>
+      </div>
+
+      <p>
+        <strong
+          >David René Langarica Hernández | A01708936 |
+          A01708936@tec.mx
+        </strong>
+      </p>
+      <p>
+        Soy un estudiante de Ingeniería en Tecnologías Computacionales
+        en el Tecnológico de Monterrey.
+      </p>
+    </header>
+    <main>
+      <hr />
+      <section class="section box has-text-centered">
+        <div class="container is-max-desktop">
+          <div class="my-4">
+            <table class="table is-fullwidth">
+              <thead class="is-size-4">
+                <tr>
+                  <th>Intereses</th>
+                  <th>Proyectos relevantes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <ul>
+                      <li>Front end</li>
+                      <li>Diseño UX</li>
+                      <li>Música electrónica</li>
+                      <li>Películas</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li>Imify: Clon de Pinterest en React JS</li>
+                      <li>Portafolio personal: Next JS y Three JS</li>
+                      <li>Lefnica: HTML/CSS, JavaScript</li>
+                      <li>LACE: Diseño UX</li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="my-4">
+            <article class="message is-info">
+              <div class="message-header">
+                <p class="is-size-5">Colores</p>
+              </div>
+              <div class="message-body">
+                <div class="mb-3">
+                  <div class="content">
+                    <p class="has-text-weight-medium is-size-5">
+                      Mi color favorito es el dorado
+                    </p>
+                    <form class="columns">
+                      <div class="column"></div>
+                      <div class="column is-one-quarter">
+                        <div class="field">
+                          <div class="my-4">
+                            <label class="label" for="color">
+                              ¿Cuál es tu color favorito?
+                            </label>
+                          </div>
+                          <div class="my-4 container control">
+                            <input
+                              class="input is-info is-rounded"
+                              type="color"
+                              name="color"
+                            />
+                          </div>
+                        </div>
+                        <button
+                          type="submit"
+                          value="Submit"
+                          class="button is-primary"
+                        >
+                          Registrar
+                        </button>
+                      </div>
+                      <div class="column"></div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title subtitle">Pregunta</p>
+          </header>
+          <div class="card-content">
+            <div class="content">
+              <details>
+                <summary class="is-clickable has-text-info">
+                  <strong>Describe Material Design</strong>
+                </summary>
+                <br />
+                <p>
+                  Material Design es una guía de diseño de interfaz de
+                  usuario desarrollada por Google en 2014. Este ha
+                  tenido muchos cambios a lo largo de su evolución,
+                  integrando elementos para versiones tanto para
+                  aplicaciones como para ordenadores. Por ello su
+                  objetivo principal es crear una interfaz de usuario
+                  coherente en todas las plataformas.
+                  <br />
+                  <br />
+                  Su diseño se basa principalmente en algo plano y
+                  minimalista, agregando sombras, animación y
+                  profundidad para que el usuario pueda distinguir
+                  entre los diversos elementos de la interfaz.
+                </p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+      <h3>Referencias</h3>
+      <ul>
+        <li class="has-text-link">
+          Google. (2014). Material Design. https://material.io/design
+        </li>
+      </ul>
+      <br />
+    </main>
+  </body>
+</html>
