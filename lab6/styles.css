@@ -1,0 +1,108 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Lexend', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: hsla(0, 0%, 100%, 1);
+  background-image: radial-gradient(
+      at 98% 100%,
+      hsla(208, 100%, 74%, 0.7) 0px,
+      transparent 50%
+    ),
+    radial-gradient(
+      at 0% 0%,
+      hsla(271, 100%, 76%, 0.7) 0px,
+      transparent 50%
+    );
+}
+
+#signal {
+  background-image: url('./lock.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 170px;
+  aspect-ratio: 1;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 80%;
+  margin-inline: auto;
+  background-color: white;
+  outline: 2px solid magenta;
+  outline-offset: 2px;
+  border-radius: 20px;
+
+  gap: 2vh;
+
+  box-shadow: 3px 2px 52px -4px rgba(222, 83, 244, 0.4);
+  -webkit-box-shadow: 3px 2px 52px -4px rgba(222, 83, 244, 0.4);
+  -moz-box-shadow: 3px 2px 52px -4px rgba(222, 83, 244, 0.4);
+}
+
+form {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+}
+
+h1 {
+  margin-top: 3vh;
+  color: #2851d7;
+}
+
+label {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: 1vh;
+}
+
+input[type='password'] {
+  border-radius: 20px;
+  border: 2px solid blue;
+  padding: 2% 6%;
+  width: 100%;
+}
+
+#error {
+  color: red;
+  display: none;
+}
+
+#pass {
+  color: blue;
+  display: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  background-color: #466ff4;
+  color: white;
+  border: none;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+}
