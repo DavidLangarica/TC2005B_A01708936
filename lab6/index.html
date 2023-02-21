@@ -23,31 +23,86 @@
   </head>
   <body>
     <main>
-      <div id="signal"></div>
-      <h1>Verifica tu contraseña</h1>
-      <form>
-        <label>
-          Ingresa tu contraseña
-          <input
-            type="password"
-            placeholder="Contraseña"
-            id="contraseña"
-          />
-        </label>
-        <label>
-          Confirma tu contraseña
-          <input
-            type="password"
-            placeholder="Vuelve a ingresar tu contraseña"
-            id="verContraseña"
-          />
-        </label>
-        <p id="error">
-          Las contraseñas no coinciden, intenta de nuevo 😥
-        </p>
-        <p id="pass">Las contraseñas coinciden 👌</p>
-        <button type="submit" id="submit">Verificar</button>
-      </form>
+      <div class="exercise">
+        <div id="signal"></div>
+        <h1>Verifica tu contraseña</h1>
+        <form>
+          <label>
+            Ingresa tu contraseña
+            <input
+              type="password"
+              placeholder="Contraseña"
+              id="contraseña"
+            />
+          </label>
+          <label>
+            Confirma tu contraseña
+            <input
+              type="password"
+              placeholder="Vuelve a ingresar tu contraseña"
+              id="verContraseña"
+            />
+          </label>
+          <p id="error">
+            Las contraseñas no coinciden, intenta de nuevo 😥
+          </p>
+          <p id="pass">Las contraseñas coinciden 👌</p>
+          <button type="submit" id="submit">Verificar</button>
+        </form>
+      </div>
+      <article>
+        <h2>Preguntas</h2>
+        <details>
+          <summary>
+            <strong
+              >¿Por qué es una buena práctica usar JavaScript para
+              checar que sean válidos los inputs de las formas antes
+              de enviar los datos al servidor?</strong
+            >
+          </summary>
+          <br />
+          <p>
+            De esta forma te puedes asegurar que los datos esperados
+            son los que entran a la base de datos para su guardado o
+            comparación y así evitar errores amplios. De la misma
+            forma se mejora la experiencia del usuario cuando se les
+            despliega los motivos explicitos y concisos de algún error
+            en particular del formulario.
+          </p>
+        </details>
+        <details>
+          <summary>
+            <strong
+              >¿Cómo puedes saltarte la seguridad de validaciones
+              hechas con JavaScript?</strong
+            >
+          </summary>
+          <br />
+          <p>
+            Una de las formas de hacerlo es mediante las DevTools de
+            Chrome, simplemente activando la opción de desactivar
+            JavaScript evitará que las validaciones aparezcan.
+          </p>
+        </details>
+        <details>
+          <summary>
+            <strong
+              >Si te puedes saltar la seguridad de las validaciones de
+              JavaScript, entonces ¿por qué la primera pregunta dice
+              que es una buena práctica?</strong
+            >
+          </summary>
+          <br />
+          <p>
+            Porque el realizar acciones, como desactivar JavaScript,
+            puede originar que los datos no sean guardados o que
+            simplemente la página no se muestre (como las que están
+            hechas con React). Por lo tanto no es algo que se pueda
+            ver a menudo. Y es buena práctica porque reduces los
+            riesgos de que se preseten errores.
+          </p>
+        </details>
+      </article>
     </main>
     <script src="./script.js"></script>
   </body>

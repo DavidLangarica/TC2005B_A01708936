@@ -11,7 +11,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 100vh;
+  padding: 5% 0;
   background-color: hsla(0, 0%, 100%, 1);
   background-image: radial-gradient(
       at 98% 100%,
@@ -25,6 +25,18 @@ body {
     );
 }
 
+.exercise {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  @media (min-width: 400px) {
+    width: 60%;
+  }
+}
+
 #signal {
   background-image: url('./lock.png');
   background-repeat: no-repeat;
@@ -35,11 +47,11 @@ body {
 
 main {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 80%;
-  height: 80%;
+  padding: 4% 0;
   margin-inline: auto;
   background-color: white;
   outline: 2px solid magenta;
@@ -51,6 +63,10 @@ main {
   box-shadow: 3px 2px 52px -4px rgba(222, 83, 244, 0.4);
   -webkit-box-shadow: 3px 2px 52px -4px rgba(222, 83, 244, 0.4);
   -moz-box-shadow: 3px 2px 52px -4px rgba(222, 83, 244, 0.4);
+
+  @media (min-width: 400px) {
+    flex-direction: row;
+  }
 }
 
 form {
@@ -105,4 +121,21 @@ button {
   border-radius: 10px;
   padding: 10px;
   width: 100%;
+}
+
+article {
+  margin-top: 5vh;
+  max-width: 95%;
+
+  @media (min-width: 500px) {
+    max-width: 20%;
+  }
+}
+
+summary {
+  cursor: pointer;
+}
+
+details {
+  margin-top: 16px;
 }
