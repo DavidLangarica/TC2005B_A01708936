@@ -47,7 +47,7 @@ const server = http.createServer((request, response) => {
   let filePath = './lab6' + request.url;
   if (filePath == './lab6/') filePath = './lab6/index.html';
   let extension = path.extname(filePath);
-  let contentType = 'text/html';
+  let contentType;
 
   switch (extension) {
     case '.js':
@@ -55,6 +55,9 @@ const server = http.createServer((request, response) => {
       break;
     case '.css':
       contentType = 'text/css';
+      break;
+    default:
+      contentType = 'text/html';
       break;
   }
 
