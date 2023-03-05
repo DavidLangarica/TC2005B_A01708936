@@ -9,13 +9,13 @@
 <h1 align="center">TC2005B_A01708936</h1>
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/drlangh/tc2005b_a01708936?color=56BEB8">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/DavidLangarica/tc2005b_a01708936?color=56BEB8">
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/drlangh/tc2005b_a01708936?color=56BEB8">
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/DavidLangarica/tc2005b_a01708936?color=56BEB8">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/drlangh/tc2005b_a01708936?color=56BEB8">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/DavidLangarica/tc2005b_a01708936?color=56BEB8">
 
-  <img alt="License" src="https://img.shields.io/github/license/drlangh/tc2005b_a01708936?color=56BEB8">
+  <img alt="License" src="https://img.shields.io/github/license/drlangh/DavidLangarica?color=56BEB8">
 
   <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/drlangh/tc2005b_a01708936?color=56BEB8" /> -->
 
@@ -24,13 +24,13 @@
   <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/drlangh/tc2005b_a01708936?color=56BEB8" /> -->
 </p>
 
-<!-- Status -->
+Status
 
-<!-- <h4 align="center">
+<h4 align="center">
 	🚧  TC2005B_A01708936 🚀 Under construction...  🚧
 </h4>
 
-<hr> -->
+<hr>
 
 <p align="center">
   <a href="#dart-about">About</a> &#xa0; | &#xa0; 
@@ -72,7 +72,7 @@ $ git clone https://github.com/drlangh/tc2005b_a01708936
 
 ## :memo: License
 
-This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
+This project is under license from MIT.
 
 Made with :heart: by <a href="https://github.com/drlangh" target="_blank">David Langarica</a>
 
