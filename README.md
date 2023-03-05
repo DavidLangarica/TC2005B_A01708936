@@ -14,7 +14,6 @@
 
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/DavidLangarica/tc2005b_a01708936?color=56BEB8">
 
-  <img alt="License" src="https://img.shields.io/github/license/DavidLangarica/tc2005b_a01708936?color=56BEB8">
 </p>
 
 <!-- Status -->

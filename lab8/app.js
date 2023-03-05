@@ -24,7 +24,7 @@ Ejercicio1(array);
 const string = 'Hola mundo';
 
 function Ejercicio2(string) {
-  filesystem.writeFileSync('ejercicio2.txt', string);
+  filesystem.writeFileSync('./lab8/ejercicio2.txt', string);
 }
 
 Ejercicio2(string);
