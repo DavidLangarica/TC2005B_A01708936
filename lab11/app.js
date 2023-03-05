@@ -78,7 +78,13 @@ app.get('/results', (request, response, next) => {
 
 app.use((request, response, next) => {
   response.status(404);
-  response.send('La ruta no existe');
+  let html = `
+  <h1>Error 404</h1>
+  <p>La ruta especificada no existe</p>
+  <p>¿Estás intentando ir a inicio?</p>
+  <a href="/inicio"><button>Ir a inicio</button></a>
+  `;
+  response.send(html);
 });
 
 app.listen(8000, () => {
