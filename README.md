@@ -3,7 +3,6 @@
 
 &#xa0;
 
-  <!-- <a href="https://tc2005b_a01708936.netlify.app">Demo</a> -->
 </div>
 
 <h1 align="center">TC2005B_A01708936</h1>
@@ -15,13 +14,7 @@
 
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/DavidLangarica/tc2005b_a01708936?color=56BEB8">
 
-  <img alt="License" src="https://img.shields.io/github/license/drlangh/DavidLangarica?color=56BEB8">
-
-  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/drlangh/tc2005b_a01708936?color=56BEB8" /> -->
-
-  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/drlangh/tc2005b_a01708936?color=56BEB8" /> -->
-
-  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/drlangh/tc2005b_a01708936?color=56BEB8" /> -->
+  <img alt="License" src="https://img.shields.io/github/license/DavidLangarica/tc2005b_a01708936?color=56BEB8">
 </p>
 
 <!-- Status -->
