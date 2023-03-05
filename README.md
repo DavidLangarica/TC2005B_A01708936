@@ -60,12 +60,11 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) an
 # Clone this project
 $ git clone https://github.com/drlangh/tc2005b_a01708936
 
-# The server will initialize in the <http://localhost:3000>
 ```
 
 ## :memo: License
 
-This project is under license from MIT.
+This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
 
 Made with :heart: by <a href="https://github.com/drlangh" target="_blank">David Langarica</a>
 
