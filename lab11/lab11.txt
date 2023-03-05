@@ -1,0 +1,10 @@
+
+    <<<<<<<<<<<<<<<<<<<<<<<
+    Datos de la sesión.
+  
+    Perrito preferido: PERRITO3.
+    Gatito preferido: GATITO4.
+    Conejito preferido: CONEJITO2.
+    
+    <<<<<<<<<<<<<<<<<<<<<<< 
+  
