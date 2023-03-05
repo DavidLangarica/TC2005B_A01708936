@@ -38,6 +38,10 @@ app.get('/results', (request, response, next) => {
     Conejito preferido: ${respuestas[2].toUpperCase()}.
     
     <<<<<<<<<<<<<<<<<<<<<<< 
+
+    Pregunta de la actividad: Describe el archivo package.json
+
+    Respuesta: Es el archivo en donde se recopilan datos relevantes de un proyecto, como lo pueden ser detalles e información, scripts o (una de las cosas más importantes) las dependencias y paquetes instalados para tenerlos como registro.
   `;
     filesystem.writeFileSync('./lab11.txt', content);
 
