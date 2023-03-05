@@ -24,7 +24,7 @@
   <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/drlangh/tc2005b_a01708936?color=56BEB8" /> -->
 </p>
 
-Status
+<!-- Status -->
 
 <h4 align="center">
 	🚧  TC2005B_A01708936 🚀 Under construction...  🚧
