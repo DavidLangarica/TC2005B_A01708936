@@ -26,11 +26,12 @@ Lab 12: Dynamic HTML
 
 The following tools were used in this project:
 
-- [Expo](https://expo.io/)
+- [HTML5](https://html.spec.whatwg.org/multipage/)
+- [CSS](https://devdocs.io/css/)
+- [JavaScript](https://devdocs.io/javascript/)
 - [Node.js](https://nodejs.org/en/)
-- [React](https://pt-br.reactjs.org/)
-- [React Native](https://reactnative.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
+- [Express](https://expressjs.com/)
+- [EJS](https://ejs.co/)
 
 ## :white_check_mark: Requirements
 
