@@ -48,6 +48,7 @@ The following tools were used in this project:
 - [JavaScript](https://devdocs.io/javascript/)
 - [Node.js](https://nodejs.org/en/)
 - [Express](https://expressjs.com/)
+- [EJS](https://ejs.co/)
 
 ## :white_check_mark: Requirements
 
