@@ -67,6 +67,8 @@ This project is under license from MIT. For more details, see the [LICENSE](LICE
 
 Made with :heart: by <a href="https://github.com/drlangh" target="_blank">David Langarica</a>
 
+Colaborators: <a href="https://github.com/SJBauer0" target="_blank">SJBauer0</a>
+
 &#xa0;
 
 <a href="#top">Back to top</a>
