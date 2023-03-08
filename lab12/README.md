@@ -3,7 +3,6 @@
 
 &#xa0;
 
-  <!-- <a href="https://lab11.netlify.app">Demo</a> -->
 </div>
 
 <h1 align="center">Lab12</h1>
@@ -52,7 +51,7 @@ $ npm start
 # The server will initialize in the <http://localhost:8000>
 ```
 
-Made with :heart: by <a href="https://github.com/DavidLangarica" target="_blank">DavidLangarica</a>
+Made with :heart: by <a href="https://github.com/DavidLangarica" target="_blank">DavidLangarica</a> and <a href="https://github.com/SJBauer0" target="_blank">SJBauer0</a>
 
 &#xa0;
 
