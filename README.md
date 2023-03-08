@@ -48,6 +48,7 @@ The following tools were used in this project:
 - [JavaScript](https://devdocs.io/javascript/)
 - [Node.js](https://nodejs.org/en/)
 - [Express](https://expressjs.com/)
+- [EJS](https://ejs.co/)
 
 ## :white_check_mark: Requirements
 
@@ -66,6 +67,8 @@ $ git clone https://github.com/drlangh/tc2005b_a01708936
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
 
 Made with :heart: by <a href="https://github.com/drlangh" target="_blank">David Langarica</a>
+
+Colaborators: <a href="https://github.com/SJBauer0" target="_blank">SJBauer0</a>
 
 &#xa0;
 

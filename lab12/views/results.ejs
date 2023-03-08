@@ -1,0 +1,51 @@
+<%- include('includes/head.ejs') %>
+<!--  -->
+
+<% pets = ['Perritos', 'Gatitos', 'Conejitos'] %>
+<!--  -->
+<% respuestasDisp = [] %>
+<!--  -->
+<%respuestas.map((res) => {
+    let resTemp = res.charAt(0).toUpperCase() + res.slice(1);
+    resTemp = resTemp.replace(/[0-9]/g, ' $&');
+    respuestasDisp.push(resTemp);
+})%>
+<!--  -->
+
+<div class="container text-center mt-3 p-4">
+  <h1>Resultados</h1>
+  <p>Estas fueron tus imágenes preferidas para cada grupo:</p>
+</div>
+<div class="container text-center bg-primary-subtle p-4 gap-5 rounded-5 border border-primary-subtle">
+  <div class="row">
+    <%pets.map((pet,i) => { %>
+    <div class="col p-1 container d-flex flex-column align-items-center justify-content-center">
+      <h2><%= pet %></h2>
+      <div
+            class="card-img-top rounded-3 mt-3"
+            style="
+              width: 70%;
+              height: 300px;
+              background-position: center;
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-image: url(/img/options/<%= respuestas[i] %>.jpg);
+            "
+          ></div>
+      <p class="lead text-primary-emphasis mt-3"><strong><%= respuestasDisp[i] %></strong></p>
+    </div>
+    <%})%>
+  </div>
+</div>
+<div class="mt-5 container-fluid text-center">
+  <div>
+    <h3>¿Qué otros templating engines existen para node?</h3>
+    <p>Jade, Vash, EJS, Mustache, Dust.js, Nunjucks, Handlebars, atpl, haml.</p>
+  <p>Template Engines for Node.js. (s. f.). https://www.tutorialsteacher.com/nodejs/template-engines-for-nodejs</p>
+  </div>
+  <div class="mt-5 mb-5">
+    <a href="/inicio"><button type="button" class="btn btn-primary">
+        Volver a inicio
+      </button></a>
+  </div>
+</div>
