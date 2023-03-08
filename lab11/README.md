@@ -26,11 +26,9 @@ Lab 11: Exploring Express
 
 The following tools were used in this project:
 
-- [Expo](https://expo.io/)
+- [HTML5](https://html.spec.whatwg.org/multipage/)
 - [Node.js](https://nodejs.org/en/)
-- [React](https://pt-br.reactjs.org/)
-- [React Native](https://reactnative.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
+- [Express](https://expressjs.com/)
 
 ## :white_check_mark: Requirements
 

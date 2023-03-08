@@ -1,0 +1,26 @@
+{
+  "name": "lab11",
+  "version": "1.0.0",
+  "description": "Laboratorio 12 | A01708936 ",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "test"
+  },
+  "keywords": [
+    "node"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DavidLangarica/TC2005B_A01708936.git"
+  },
+  "author": "David Langarica",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2"
+  }
+}
