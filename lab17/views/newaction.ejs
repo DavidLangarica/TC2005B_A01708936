@@ -1,0 +1,50 @@
+<%- include('includes/head.ejs') %>
+
+<h1 class="title">Create new Action:</h1>
+
+<form action="/todolist/newaction" method="POST">
+  <label for="name">Name:</label>
+  <input
+    required
+    name="name"
+    id="name"
+    class="input is-rounded"
+    type="text"
+    placeholder="Go to Space!"
+  />
+  <br /><br />
+  <label for="type">Type:</label>
+  <select required name="type" id="type" class="select">
+    <% if (types.length > 0) { %> <% for (let type of types){ %>
+    <option value="<%= type.id %>" selected><%= type.type %></option>
+    <% } %> <% } else { %>
+    <option value="NULL" selected>NULL</option>
+    <% } %>
+  </select>
+  <br /><br />
+  <label for="description">Description:</label>
+  <input
+    name="description"
+    id="description"
+    class="input is-rounded"
+    type="text"
+    placeholder="Description..."
+  />
+  <br /><br />
+  <label for="img">Image URL:</label>
+  <input
+    name="img"
+    id="img"
+    class="input is-rounded"
+    type="text"
+    placeholder="Type the url of your image..."
+  />
+  <br /><br />
+  <input
+    class="button is-rounded is-success"
+    type="submit"
+    value="Create!"
+  />
+</form>
+
+<%- include('includes/foot.ejs') %>
