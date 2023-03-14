@@ -1,13 +1,13 @@
-const express = require('express')
+const express = require('express');
 
-const router = express.Router()
+const router = express.Router();
 
-const goalsController = require('../controllers/goals.controller')
+const goalsController = require('../controllers/goals.controller');
 
-router.get('/newgoal', goalsController.getNew)
+router.get('/newgoal', goalsController.getNew);
 
-router.post('/newgoal', goalsController.postNew)
+router.post('/newgoal', goalsController.postNew);
 
-router.get('/goals', goalsController.list)
+router.get('/goals', goalsController.list);
 
-module.exports = router
+module.exports = router;

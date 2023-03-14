@@ -6,7 +6,11 @@ exports.getNew = (req, res, next) => {
     .then(([rows, fieldData]) => {
       // console.log(rows);
 
-      res.render('newaction', { types: rows });
+      res.render('newaction', {
+        types: rows,
+        isLoggedIn: req.session.isLoggedIn,
+        nombre: req.session.nombre || '',
+      });
     })
     .catch((err) => {
       console.log(err);
@@ -40,11 +44,11 @@ exports.list = (req, res, next) => {
 
   Actions.fetchAll()
     .then(([rows, fieldData]) => {
-      // console.log(rows);
-
       res.render('actions', {
         actions: rows,
         lastAction: req.session.lastAction || '',
+        isLoggedIn: req.session.isLoggedIn,
+        nombre: req.session.nombre || '',
       });
     })
     .catch((err) => {

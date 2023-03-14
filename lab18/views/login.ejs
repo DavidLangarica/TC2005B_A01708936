@@ -2,6 +2,10 @@
 
 <h1 class="title">Sign in</h1>
 
+<% if (mensaje != '') { %>
+<div class="notification is-danger"><%= mensaje %></div>
+<% } %>
+
 <form action="/usuarios/login" method="POST">
   <label for="username">Username:</label>
   <input
@@ -9,7 +13,6 @@
     id="username"
     class="input is-rounded"
     type="text"
-    placeholder="lalo"
   />
   <br /><br />
   <label for="password">Password:</label>

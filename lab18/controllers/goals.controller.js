@@ -6,7 +6,12 @@ exports.getNew = (req, res, next) => {
     .then(([rows, fieldData]) => {
       // console.log(rows);
 
-      res.render('newgoal', { types: rows });
+      isLoggedIn: req.session.isLoggedIn,
+        res.render('newgoal', {
+          types: rows,
+          isLoggedIn: req.session.isLoggedIn,
+          nombre: req.session.nombre || '',
+        });
     })
     .catch((err) => {
       console.log(err);
@@ -44,6 +49,8 @@ exports.list = (req, res, next) => {
       res.render('goals', {
         goals: rows,
         lastGoal: req.session.lastGoal || '',
+        isLoggedIn: req.session.isLoggedIn,
+        nombre: req.session.nombre || '',
       });
     })
     .catch((err) => {
