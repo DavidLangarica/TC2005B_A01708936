@@ -1,0 +1,42 @@
+<%- include('includes/head.ejs') %>
+
+<h1 class="title">Goals</h1>
+
+<% if (goals.length > 0) { %>
+    <div class="columns">
+        <% let columns = 0; %>
+        <% for (let goal of goals) { %>
+            <% if (columns % 4 == 0) { %>
+    </div>
+    <div class="columns">
+            <% } %>
+            <% columns++; %>
+            <div class="column">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="<%= goal.img %>" alt="Placeholder image">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-left">
+                            </div>
+                            <div class="media-content">
+                                <p class="title is-4"><%= goal.name %></p>
+                                <p class="subtitle is-6"><%= goal.type %></p>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <%= goal.description %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+<% } else { %>
+    <h1>There are no goals</h1>
+<% } %>
+
+<%- include('includes/foot.ejs') %>

@@ -1,0 +1,20 @@
+<%- include('includes/head.ejs') %>
+
+<h1 class="title">Create new Goal: </h1>
+
+<form action="/todolist/newgoal" method="POST">
+
+    <label for="name">Name:</label>
+    <input required name="name" id="name" class="input is-rounded" type="text" placeholder="Go to Space!">
+    <br><br>
+    <label for="type">Type:</label>
+    <input name="type" id="type" class="input is-rounded" type="text" placeholder="Urgent?">
+    <br><br>
+    <label for="description">Description:</label>
+    <input name="description" id="description" class="input is-rounded" type="text" placeholder="description...">
+    <br><br>
+    <input class="button is-rounded is-success" type="submit" value="Create!">
+
+</form>
+
+<%- include('includes/foot.ejs') %>
