@@ -1,0 +1,33 @@
+<%- include('includes/head.ejs') %>
+
+<h1 class="title">Sign in</h1>
+
+<% if (mensaje != '') { %>
+<div class="notification is-danger"><%= mensaje %></div>
+<% } %>
+
+<form action="/usuarios/login" method="POST">
+  <label for="username">Username:</label>
+  <input
+    name="username"
+    id="username"
+    class="input is-rounded"
+    type="text"
+  />
+  <br /><br />
+  <label for="password">Password:</label>
+  <input
+    name="password"
+    id="password"
+    class="input is-rounded"
+    type="password"
+  />
+  <br /><br />
+  <input
+    class="button is-rounded is-success"
+    type="submit"
+    value="Entrar"
+  />
+</form>
+
+<%- include('includes/foot.ejs') %>
