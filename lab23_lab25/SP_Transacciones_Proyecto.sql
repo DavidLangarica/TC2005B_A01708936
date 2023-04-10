@@ -5,25 +5,20 @@ DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `DeletePregunta` (IN `pregunta_id` INT)   BEGIN
     DECLARE tipo_pregunta_id INT;
 
-    -- Manejador de errores
     DECLARE CONTINUE HANDLER FOR SQLEXCEPTION
     BEGIN
         ROLLBACK;
     END;
 
-    -- Iniciar la transacción
     START TRANSACTION;
 
-    -- Obtener el id_tipo_pregunta
     SELECT id_tipo_pregunta INTO tipo_pregunta_id
     FROM preguntas
     WHERE id = pregunta_id;
     
-    -- Eliminar las respuestas asociadas a la pregunta
     DELETE FROM respuestas
     WHERE id_pregunta = pregunta_id;
 
-    -- Eliminar las opciones de respuesta si id_tipo_pregunta es 3
     IF tipo_pregunta_id = 3 THEN
         DELETE FROM opciones_respuestas
         WHERE id IN (
@@ -33,11 +28,9 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `DeletePregunta` (IN `pregunta_id` I
         );
     END IF;
 
-    -- Eliminar la pregunta
     DELETE FROM preguntas
     WHERE id = pregunta_id;
 
-    -- Confirmar la transacción si todo fue exitoso
     COMMIT;
 
 END$$
@@ -48,16 +41,13 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `EditPregunta` (IN `pregunta_id` INT
     DECLARE separator INT;
     DECLARE opciones_actuales TEXT;
 
-    -- Declarar el manejador de errores
     DECLARE CONTINUE HANDLER FOR SQLEXCEPTION
     BEGIN
         ROLLBACK;
     END;
 
-    -- Iniciar la transacción
     START TRANSACTION;
 
-    -- Obtener el id_tipo_pregunta y las opciones actuales
     SELECT id_tipo_pregunta, GROUP_CONCAT(opciones_respuestas.opcion_respuesta) INTO tipo_pregunta_id, opciones_actuales
     FROM preguntas
     LEFT JOIN preguntas_opciones ON preguntas.id = preguntas_opciones.id_pregunta
@@ -65,12 +55,10 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `EditPregunta` (IN `pregunta_id` INT
     WHERE preguntas.id = pregunta_id
     GROUP BY preguntas.id;
 
-    -- Actualizar la pregunta, predeterminada e id_tipo_pregunta
     UPDATE preguntas
     SET pregunta = nueva_pregunta, predeterminada = nueva_predeterminada, id_tipo_pregunta = nuevo_id_tipo_pregunta
     WHERE id = pregunta_id;
 
-    -- Si el id_tipo_pregunta original es 3 y las opciones han cambiado, eliminar las opciones de respuesta actuales
     IF tipo_pregunta_id = 3 THEN
         DELETE FROM opciones_respuestas
         WHERE id IN (
@@ -80,7 +68,6 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `EditPregunta` (IN `pregunta_id` INT
         );
     END IF;
 
-    -- Si el nuevo id_tipo_pregunta es 3 y las opciones han cambiado, agregar las nuevas opciones de respuesta
     IF nuevo_id_tipo_pregunta = 3 THEN
         WHILE LENGTH(nuevas_opciones) > 0 DO
             SET separator = LOCATE(',', nuevas_opciones);
@@ -101,7 +88,6 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `EditPregunta` (IN `pregunta_id` INT
         END WHILE;
     END IF;
 
-    -- Confirmar la transacción si todo fue exitoso
     COMMIT;
 
 END$$
@@ -110,16 +96,13 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `InsertPregunta` (IN `pregunta_id` I
     DECLARE opcion_actual VARCHAR(255);
     DECLARE separator INT;
 
-    -- Declarar el manejador de errores
     DECLARE CONTINUE HANDLER FOR SQLEXCEPTION
     BEGIN
         ROLLBACK;
     END;
 
-    -- Iniciar la transacción
     START TRANSACTION;
 
-    -- Insertar la nueva pregunta
     INSERT INTO preguntas(id, pregunta, predeterminada, id_tipo_pregunta)
     VALUES (pregunta_id, nueva_pregunta, es_predeterminada, tipo_pregunta_id);
 
@@ -137,7 +120,6 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `InsertPregunta` (IN `pregunta_id` I
               END IF;
 
               IF LENGTH(opcion_actual) > 0 THEN
-                  -- Insertar la opción de respuesta y asociarla con la pregunta
                   INSERT INTO opciones_respuestas(opcion_respuesta)
                   VALUES (opcion_actual);
 
@@ -148,7 +130,6 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `InsertPregunta` (IN `pregunta_id` I
         END;
     END IF;
 
-    -- Confirmar la transacción si todo fue exitoso
     COMMIT;
 
 END$$
