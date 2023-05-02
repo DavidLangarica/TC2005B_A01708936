@@ -1,0 +1,127 @@
+<%- include('includes/head.ejs') %>
+
+<h1 class="title">Actions</h1>
+
+<label for="buscar">Buscar: </label>
+<input
+  class="input is-medium"
+  type="text"
+  name="buscar"
+  id="buscar"
+/>
+<br /><br />
+<div id="resultados"> </div>
+  <% if (actions.length > 0) { %>
+  <div class="columns">
+    <% let columns = 0; %> <% for (let action of actions) { %> <% if
+    (columns % 4 == 0) { %>
+  </div>
+  <div class="columns">
+    <% } %> <% columns++; %>
+    <div class="column">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img
+              src="/uploads/<%=action.img %>"
+              alt="Placeholder image"
+            />
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left"></div>
+            <div class="media-content">
+              <p class="title is-4"><%= action.name %></p>
+              <p class="subtitle is-6"><%= action.type %></p>
+            </div>
+          </div>
+          <div class="content">
+            <%= action.description %>
+            <br />
+            <time datetime="<%= action.created_at %>">
+              <%= action.created_at %>
+            </time>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% } %>
+  </div>
+  <% } else { %>
+  <h1>There are no Actions</h1>
+  <% } %> <% if (lastAction != '') { %>
+  <div class="notification is-link is-light">
+    Last Action Created: <%= lastAction %>
+  </div>
+  <% } %>
+
+  <a href="/todolist/newaction" class="button is-link is-rounded"
+    >Create Action</a
+  >
+
+  <script>
+    document.getElementById('buscar').onkeyup = () => {
+      const id = document.getElementById('buscar').value;
+      fetch('/todolist/actions/search/' + id, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+        .then((result) => {
+          return result.json(); //Regresa otra promesa
+        })
+        .then((data) => {
+          //Modificamos el DOM de nuestra página de acuerdo a los datos de la segunda promesa
+          console.log(data.action);
+          let respuesta = '';
+          if (data.action.length > 0) {
+            respuesta += '<div class="columns">';
+            let columns = 0;
+            for (let type of data.action) {
+              if (columns % 4 == 0) {
+                respuesta += '</div>';
+                respuesta += '<div class="columns">';
+              }
+              columns++;
+                    respuesta += '<div class="column">';
+                        respuesta += '<div class="card">';
+                            respuesta += '<div class="card-image">';
+                                respuesta += '<figure class="image is-4by3">';
+                                    respuesta += '<img src="/uploads/' + type.img +'" alt="Placeholder image">';
+                                respuesta += '</figure>';
+                            respuesta += '</div>';
+                            respuesta += '<div class="card-content">';
+                                respuesta += '<div class="media">';
+                                    respuesta += '<div class="media-left">';
+                                    respuesta += '</div>';
+                                    respuesta += '<div class="media-content">';
+                                        respuesta += '<p class="title is-4">' + type.name + '</p>';
+                                        respuesta += '<p class="subtitle is-6">' + type.type + '</p>';
+                                    respuesta += '</div>';
+                                respuesta += '</div>';
+                            
+                                respuesta += '<div class="content">';
+                                    respuesta += type.description ;
+                                    respuesta += '<br>';
+                                    respuesta += '<time datetime="' + type.created_at + '">' + type.created_at + '</time>';
+                                respuesta += '</div>';
+                            respuesta += '</div>';
+                        respuesta += '</div>';
+                    respuesta += '</div>';
+                } 
+            respuesta += '</div>';
+            } else { 
+                respuesta += '<h1>No hay perros registrados</h1>';
+            }   
+          document.getElementById('resultados').innerHTML = respuesta;
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+  </script>
+
+  <%- include('includes/foot.ejs') %>
+</div>
